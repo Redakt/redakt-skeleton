@@ -1,0 +1,19 @@
+﻿@inherits RedaktPage<RedaktSkeleton.ViewModels.Pages.PageBase>
+@{
+    var home = await Redakt.Context.RootAsync<RedaktSkeleton.ViewModels.Pages.Homepage>();
+    var rootPages = await home.ChildrenAsync<RedaktSkeleton.ViewModels.Pages.ContentPage>();
+}
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <img src="https://www.redaktcms.com/assets/logo-nuget.png" class="bi me-2" width="40" height="40" />
+        <span class="fs-4">Redakt Skeleton</span>
+    </a>
+
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a rx-href="@home" class="nav-link @(Model.Id == home.Id ? "active" : null)">@home.Name</a></li>
+        @foreach (var rootPage in rootPages)
+        {
+            <li class="nav-item"><a rx-href="@rootPage" class="nav-link @(Model.Id == rootPage.Id || Model.AncestorIds.Contains(rootPage.Id) ? "active" : null)">@rootPage.Name</a></li>
+        }
+    </ul>
+</header>
