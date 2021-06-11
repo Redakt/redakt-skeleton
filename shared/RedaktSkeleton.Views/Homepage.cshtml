@@ -1,2 +1,8 @@
 ﻿@inherits RedaktPage<RedaktSkeleton.ViewModels.Pages.Homepage>
-<h1 rx-content="@Model.Content.PageTitle" rx-default="@Model.Name"></h1>
+@{
+    Layout = "Shared\\_Layout.cshtml";
+}
+@foreach (var component in Model.Content.Components)
+{
+    @await Html.PartialAsync("~/Components/_" + component.GetType().Name + ".cshtml", component)
+}

@@ -1,0 +1,17 @@
+﻿@model RedaktSkeleton.ViewModels.Components.Features
+<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    @foreach (var item in Model.Items)
+    {
+        <div class="feature col">
+            <div class="feature-icon bg-primary bg-gradient">
+                <i class="bi-@item.Icon"></i>
+            </div>
+            <h2 rx-content="@item.Title">Featured title</h2>
+            <p rx-content="@item.Description" rx-if-empty="@EmptyAction.RemoveTag"></p>
+            <a rx-href="@item.CallToAction" rx-href-if-empty="@EmptyAction.RemoveTag" class="icon-link">
+                @item.CallToAction?.Title
+                <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+            </a>
+        </div>
+    }
+</div>
