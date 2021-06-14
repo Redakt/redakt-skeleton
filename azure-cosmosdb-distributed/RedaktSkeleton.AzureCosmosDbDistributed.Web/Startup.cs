@@ -17,9 +17,9 @@ namespace RedaktSkeleton.AzureCosmosDbDistributed.Web
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            var builder = services.AddRedakt();
-            builder.AddCosmosDbDataStore();
-            builder.AddAzureBlobStorage();
+            services.AddRedakt()  // Adds generic Redakt services and common feature modules.
+                .AddCosmosDbDataStore()  // Adds CosmosDB database services.
+                .AddAzureBlobStorage();  // Adds Azure Blob Storage services.
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -32,9 +32,9 @@ namespace RedaktSkeleton.AzureCosmosDbDistributed.Web
 
             app.UseRouting();
 
-            app.UseRedaktUrlManagement();  // Remove this line if you do not want to use Redakt URL management.
+            app.UseRedaktUrlManagement();  // Remove this line (and the package) if you do not want to use Redakt URL management.
             app.UseRedaktPageRendering();  // Remove this line if you do not want to use Redakt page (Razor template) rendering.
-            app.UseRedaktContentApi();  // Remove this line if you do not want to use the Redakt Content Delivery API.
+            app.UseRedaktContentApi();  // Remove this line (and the package) if you do not want to use the Redakt Content Delivery API.
             app.UseRedaktSitemapXml();  // Remove this line if you do not want Redakt to automaticaly generate a sitemap.xml.
         }
     }

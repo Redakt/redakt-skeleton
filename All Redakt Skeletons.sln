@@ -1,0 +1,104 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{6D60BE6A-1F4D-422C-B929-FA0A98E7FD55}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedaktSkeleton.ViewModels", "shared\RedaktSkeleton.ViewModels\RedaktSkeleton.ViewModels.csproj", "{5A37F458-2E71-4F7C-BA7E-E61F8FEFDB27}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedaktSkeleton.Views", "shared\RedaktSkeleton.Views\RedaktSkeleton.Views.csproj", "{4DD26DFE-B4E4-4151-8BA9-1C3B81CBC80D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Azure CosmosDB", "Azure CosmosDB", "{7F4AE207-B9FE-474A-8B08-48BC6F7DD764}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Single", "Single", "{02A3D92B-85F3-4C75-A1E5-1259AA0159B3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedaktSkeleton.AzureCosmosDbSingle.Web", "azure-cosmosdb-single\RedaktSkeleton.AzureCosmosDbSingle.Web\RedaktSkeleton.AzureCosmosDbSingle.Web.csproj", "{75A5598C-CA6F-4DE7-9056-655BE9A3A3BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Distributed", "Distributed", "{BB50FCE4-D565-4BAB-892C-E82008056C97}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedaktSkeleton.AzureCosmosDbDistributed.BackOffice", "azure-cosmosdb-distributed\RedaktSkeleton.AzureCosmosDbDistributed.BackOffice\RedaktSkeleton.AzureCosmosDbDistributed.BackOffice.csproj", "{3FA836C5-BB38-408D-853B-0CAE0D32A28A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedaktSkeleton.AzureCosmosDbDistributed.Web", "azure-cosmosdb-distributed\RedaktSkeleton.AzureCosmosDbDistributed.Web\RedaktSkeleton.AzureCosmosDbDistributed.Web.csproj", "{6AEB4E5A-BB99-4A1A-8B84-C670AAB33D52}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LiteDB", "LiteDB", "{07BE46BA-81C9-47AC-A830-672067037B17}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedaktSkeleton.LiteDbSingle.Web", "local-litedb-single\RedaktSkeleton.LiteDbSingle.Web\RedaktSkeleton.LiteDbSingle.Web.csproj", "{E5439685-90E0-40FA-9437-774CD354E2D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Amazon MongoDB", "Amazon MongoDB", "{3F55B43E-7313-49DE-A7B9-B248984FC9E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Single", "Single", "{34BCAF63-D765-46BE-8458-FADB9D8D855A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedaktSkeleton.AwsMongoDbSingle.Web", "aws-mongodb-single\RedaktSkeleton.AwsMongoDbSingle.Web\RedaktSkeleton.AwsMongoDbSingle.Web.csproj", "{05F7CE99-DD48-4FFE-B6F1-79E7E7191878}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Distributed", "Distributed", "{9ECB4110-3318-45DC-9D11-ED05BC1C82AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedaktSkeleton.AwsMongoDbDistributed.BackOffice", "aws-mongodb-distributed\RedaktSkeleton.AwsMongoDbDistributed.BackOffice\RedaktSkeleton.AwsMongoDbDistributed.BackOffice.csproj", "{4F0F7938-B79A-4305-934B-AD43C519F6A8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedaktSkeleton.AwsMongoDbDistributed.Web", "aws-mongodb-distributed\RedaktSkeleton.AwsMongoDbDistributed.Web\RedaktSkeleton.AwsMongoDbDistributed.Web.csproj", "{542BEFC1-9B55-45AA-AECA-4410910FE7A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A37F458-2E71-4F7C-BA7E-E61F8FEFDB27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A37F458-2E71-4F7C-BA7E-E61F8FEFDB27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A37F458-2E71-4F7C-BA7E-E61F8FEFDB27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A37F458-2E71-4F7C-BA7E-E61F8FEFDB27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DD26DFE-B4E4-4151-8BA9-1C3B81CBC80D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DD26DFE-B4E4-4151-8BA9-1C3B81CBC80D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DD26DFE-B4E4-4151-8BA9-1C3B81CBC80D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DD26DFE-B4E4-4151-8BA9-1C3B81CBC80D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75A5598C-CA6F-4DE7-9056-655BE9A3A3BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75A5598C-CA6F-4DE7-9056-655BE9A3A3BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75A5598C-CA6F-4DE7-9056-655BE9A3A3BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75A5598C-CA6F-4DE7-9056-655BE9A3A3BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FA836C5-BB38-408D-853B-0CAE0D32A28A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FA836C5-BB38-408D-853B-0CAE0D32A28A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FA836C5-BB38-408D-853B-0CAE0D32A28A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FA836C5-BB38-408D-853B-0CAE0D32A28A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AEB4E5A-BB99-4A1A-8B84-C670AAB33D52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AEB4E5A-BB99-4A1A-8B84-C670AAB33D52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AEB4E5A-BB99-4A1A-8B84-C670AAB33D52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AEB4E5A-BB99-4A1A-8B84-C670AAB33D52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5439685-90E0-40FA-9437-774CD354E2D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5439685-90E0-40FA-9437-774CD354E2D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5439685-90E0-40FA-9437-774CD354E2D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5439685-90E0-40FA-9437-774CD354E2D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05F7CE99-DD48-4FFE-B6F1-79E7E7191878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05F7CE99-DD48-4FFE-B6F1-79E7E7191878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05F7CE99-DD48-4FFE-B6F1-79E7E7191878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05F7CE99-DD48-4FFE-B6F1-79E7E7191878}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F0F7938-B79A-4305-934B-AD43C519F6A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F0F7938-B79A-4305-934B-AD43C519F6A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F0F7938-B79A-4305-934B-AD43C519F6A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F0F7938-B79A-4305-934B-AD43C519F6A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{542BEFC1-9B55-45AA-AECA-4410910FE7A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{542BEFC1-9B55-45AA-AECA-4410910FE7A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{542BEFC1-9B55-45AA-AECA-4410910FE7A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{542BEFC1-9B55-45AA-AECA-4410910FE7A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5A37F458-2E71-4F7C-BA7E-E61F8FEFDB27} = {6D60BE6A-1F4D-422C-B929-FA0A98E7FD55}
+		{4DD26DFE-B4E4-4151-8BA9-1C3B81CBC80D} = {6D60BE6A-1F4D-422C-B929-FA0A98E7FD55}
+		{02A3D92B-85F3-4C75-A1E5-1259AA0159B3} = {7F4AE207-B9FE-474A-8B08-48BC6F7DD764}
+		{75A5598C-CA6F-4DE7-9056-655BE9A3A3BF} = {02A3D92B-85F3-4C75-A1E5-1259AA0159B3}
+		{BB50FCE4-D565-4BAB-892C-E82008056C97} = {7F4AE207-B9FE-474A-8B08-48BC6F7DD764}
+		{3FA836C5-BB38-408D-853B-0CAE0D32A28A} = {BB50FCE4-D565-4BAB-892C-E82008056C97}
+		{6AEB4E5A-BB99-4A1A-8B84-C670AAB33D52} = {BB50FCE4-D565-4BAB-892C-E82008056C97}
+		{E5439685-90E0-40FA-9437-774CD354E2D6} = {07BE46BA-81C9-47AC-A830-672067037B17}
+		{34BCAF63-D765-46BE-8458-FADB9D8D855A} = {3F55B43E-7313-49DE-A7B9-B248984FC9E9}
+		{05F7CE99-DD48-4FFE-B6F1-79E7E7191878} = {34BCAF63-D765-46BE-8458-FADB9D8D855A}
+		{9ECB4110-3318-45DC-9D11-ED05BC1C82AF} = {3F55B43E-7313-49DE-A7B9-B248984FC9E9}
+		{4F0F7938-B79A-4305-934B-AD43C519F6A8} = {9ECB4110-3318-45DC-9D11-ED05BC1C82AF}
+		{542BEFC1-9B55-45AA-AECA-4410910FE7A5} = {9ECB4110-3318-45DC-9D11-ED05BC1C82AF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1DBBD8CB-EE8A-4EEE-8798-D55A5EA0704B}
+	EndGlobalSection
+EndGlobal

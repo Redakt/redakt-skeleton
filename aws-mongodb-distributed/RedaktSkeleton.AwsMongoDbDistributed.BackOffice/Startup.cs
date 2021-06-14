@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RedaktSekeleton.AzureCosmosDbDistributed.BackOffice
+namespace RedaktSkeleton.AwsMongoDbDistributed.BackOffice
 {
     public class Startup
     {
@@ -16,9 +16,9 @@ namespace RedaktSekeleton.AzureCosmosDbDistributed.BackOffice
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRedakt()
-                .AddCosmosDbDataStore()
-                .AddAzureBlobStorage();
+            services.AddRedakt()  // Adds generic Redakt services and common feature modules.
+                .AddMongoDbDataStore()  // Adds MongoDB database services.
+                .AddGridFsFileStore();  // Adds MongoDB GridFS embedded storage services.
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -9,17 +9,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RedaktSkeleton.LiteDbSingle.Web
+namespace RedaktSkeleton.AwsMongoDbSingle.Web
 {
     public class Startup
     {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        public IConfiguration Configuration { get; }
+
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRedakt()  // Adds generic Redakt services and common feature modules.
-                .AddLiteDbDataStore()  // Adds LiteDB database services.
-                .AddLiteDbFileStore();  // Adds LiteDB embedded file storage services.
+                .AddMongoDbDataStore()  // Adds MongoDB database services.
+                .AddGridFsFileStore();  // Adds MongoDB GridFS embedded storage services.
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

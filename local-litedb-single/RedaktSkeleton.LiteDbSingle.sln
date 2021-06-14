@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedaktSkeleton.ViewModels",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedaktSkeleton.Views", "..\shared\RedaktSkeleton.Views\RedaktSkeleton.Views.csproj", "{9889461B-F6BD-45DD-9796-AC9045735DD8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{F036DBF3-CB01-4C29-A617-86D9F3214B63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{86A4EEEF-B51E-412D-8221-472B12B0F79C} = {F036DBF3-CB01-4C29-A617-86D9F3214B63}
+		{9889461B-F6BD-45DD-9796-AC9045735DD8} = {F036DBF3-CB01-4C29-A617-86D9F3214B63}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6DAA4D41-6F3D-4F64-8309-68BEAC9E5382}

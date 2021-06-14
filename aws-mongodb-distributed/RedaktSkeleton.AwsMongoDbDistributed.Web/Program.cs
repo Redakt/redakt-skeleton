@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RedaktSekeleton.AzureCosmosDbDistributed.BackOffice
+namespace RedaktSkeleton.AwsMongoDbDistributed.Web
 {
     public class Program
     {
