@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RedaktSkeleton.AwsMongoDbDistributed.Web
+namespace RedaktSkeleton.MongoDbDistributed.Web
 {
     public class Startup
     {
@@ -19,10 +19,8 @@ namespace RedaktSkeleton.AwsMongoDbDistributed.Web
         {
             services.AddRedakt()  // Adds generic Redakt services and common feature modules.
                 .AddMongoDbDataStore()  // Adds MongoDB database services.
-                .AddMongoCappedCollectionServiceBus()  // Adds MongoDB Capped Collection service bus services.
-                .AddS3Storage();  // Adds AWS S3 storage services.
-                //.AddGridFsFileStore()  // Alternative to S3: Adds MongoDB GridFS embedded storage services.
-                //.AddAwsServiceBus();  // Alternative to Capped Collection Service Bus: Adds AWS SNS/SQS service bus services.
+                .AddGridFsFileStore()  // Adds MongoDB GridFS embedded storage services.
+                .AddMongoCappedCollectionServiceBus();  // Adds MongoDB Capped Collection service bus services.
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

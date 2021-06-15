@@ -26,7 +26,8 @@ namespace RedaktSkeleton.AwsMongoDbSingle.Web
         {
             services.AddRedakt()  // Adds generic Redakt services and common feature modules.
                 .AddMongoDbDataStore()  // Adds MongoDB database services.
-                .AddGridFsFileStore();  // Adds MongoDB GridFS embedded storage services.
+                .AddS3Storage();  // Adds AWS S3 storage services.
+                //.AddGridFsFileStore();  // Alternative to S3: Adds MongoDB GridFS embedded storage services.
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,9 +37,32 @@ namespace RedaktSkeleton.AwsMongoDbSingle.Web
             {
                 app.UseDeveloperExceptionPage();
             }
+                        
+            app.UseHsts();
+            app.UseHttpsRedirection();
+
+            app.UseResponseCompression();  // Response compression of dynamic pages is recommended.
+
+            // Set compression & cache for static files.
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                HttpsCompression = Microsoft.AspNetCore.Http.Features.HttpsCompressionMode.Compress,
+                OnPrepareResponse = context =>
+                {
+                    var headers = context.Context.Response.GetTypedHeaders();
+                    headers.CacheControl = new Microsoft.Net.Http.Headers.CacheControlHeaderValue
+                    {
+                        Public = true,
+                        MaxAge = TimeSpan.FromDays(30)
+                    };
+                }
+            });
 
             app.UseRouting();
+                                    
+            app.UseAuthorization();  // UseAuthorization required for projects with back office.
 
+            // Redakt middleware
             app.UseRedaktUrlManagement();  // Remove this line (and the package) if you do not want to use Redakt URL management.
             app.UseRedaktIdentityServer();
             app.UseRedaktBackOffice();

@@ -29,9 +29,32 @@ namespace RedaktSkeleton.LiteDbSingle.Web
             {
                 app.UseDeveloperExceptionPage();
             }
+                        
+            app.UseHsts();
+            app.UseHttpsRedirection();
+
+            app.UseResponseCompression();  // Response compression of dynamic pages is recommended.
+
+            // Set compression & cache for static files.
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                HttpsCompression = Microsoft.AspNetCore.Http.Features.HttpsCompressionMode.Compress,
+                OnPrepareResponse = context =>
+                {
+                    var headers = context.Context.Response.GetTypedHeaders();
+                    headers.CacheControl = new Microsoft.Net.Http.Headers.CacheControlHeaderValue
+                    {
+                        Public = true,
+                        MaxAge = TimeSpan.FromDays(30)
+                    };
+                }
+            });
 
             app.UseRouting();
+                                    
+            app.UseAuthorization();  // UseAuthorization required for projects with back office.
 
+            // Redakt middleware
             app.UseRedaktUrlManagement();  // Remove this line (and the package) if you do not want to use Redakt URL management.
             app.UseRedaktIdentityServer();
             app.UseRedaktBackOffice();

@@ -18,7 +18,8 @@ namespace RedaktSkeleton.AzureCosmosDbDistributed.BackOffice
         {
             services.AddRedakt()  // Adds generic Redakt services and common feature modules.
                 .AddCosmosDbDataStore()  // Adds CosmosDB database services.
-                .AddAzureBlobStorage();  // Adds Azure Blob Storage services.
+                .AddAzureBlobStorage()  // Adds Azure Blob Storage services.
+                .AddAzureServiceBus();  // Adds Azure Service Bus services.
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -28,9 +29,15 @@ namespace RedaktSkeleton.AzureCosmosDbDistributed.BackOffice
             {
                 app.UseDeveloperExceptionPage();
             }
+                        
+            app.UseHsts();
+            app.UseHttpsRedirection();
 
             app.UseRouting();
+                                    
+            app.UseAuthorization();  // UseAuthorization required for projects with back office.
 
+            // Redakt middleware
             app.UseRedaktIdentityServer();
             app.UseRedaktBackOffice();
         }

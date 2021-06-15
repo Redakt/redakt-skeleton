@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedaktSkeleton.AzureCosmosD
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LiteDB", "LiteDB", "{07BE46BA-81C9-47AC-A830-672067037B17}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedaktSkeleton.LiteDbSingle.Web", "local-litedb-single\RedaktSkeleton.LiteDbSingle.Web\RedaktSkeleton.LiteDbSingle.Web.csproj", "{E5439685-90E0-40FA-9437-774CD354E2D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedaktSkeleton.LiteDbSingle.Web", "litedb-single\RedaktSkeleton.LiteDbSingle.Web\RedaktSkeleton.LiteDbSingle.Web.csproj", "{E5439685-90E0-40FA-9437-774CD354E2D6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Amazon MongoDB", "Amazon MongoDB", "{3F55B43E-7313-49DE-A7B9-B248984FC9E9}"
 EndProject
@@ -36,6 +36,18 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedaktSkeleton.AwsMongoDbDistributed.BackOffice", "aws-mongodb-distributed\RedaktSkeleton.AwsMongoDbDistributed.BackOffice\RedaktSkeleton.AwsMongoDbDistributed.BackOffice.csproj", "{4F0F7938-B79A-4305-934B-AD43C519F6A8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedaktSkeleton.AwsMongoDbDistributed.Web", "aws-mongodb-distributed\RedaktSkeleton.AwsMongoDbDistributed.Web\RedaktSkeleton.AwsMongoDbDistributed.Web.csproj", "{542BEFC1-9B55-45AA-AECA-4410910FE7A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MongoDB", "MongoDB", "{83B274BD-1427-44DD-8607-B702E01CBAFF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Single", "Single", "{E1A4D408-B32D-4600-AA82-3B5E08616D0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Distributed", "Distributed", "{29FEE2A5-29FB-4FFE-B2C0-71208976B202}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedaktSkeleton.MongoDbSingle.Web", "mongodb-single\RedaktSkeleton.MongoDbSingle.Web\RedaktSkeleton.MongoDbSingle.Web.csproj", "{A3323949-E1E1-40EA-BA77-4FE7CAB4E395}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedaktSkeleton.MongoDbDistributed.Web", "mongodb-distributed\RedaktSkeleton.MongoDbDistributed.Web\RedaktSkeleton.MongoDbDistributed.Web.csproj", "{F33821A0-6AB1-46E9-B5FD-66C4C11D2139}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedaktSkeleton.MongoDbDistributed.BackOffice", "mongodb-distributed\RedaktSkeleton.MongoDbDistributed.BackOffice\RedaktSkeleton.MongoDbDistributed.BackOffice.csproj", "{98B5CA84-18F7-4BF2-B69C-8E8DB5A35A5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +91,18 @@ Global
 		{542BEFC1-9B55-45AA-AECA-4410910FE7A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{542BEFC1-9B55-45AA-AECA-4410910FE7A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{542BEFC1-9B55-45AA-AECA-4410910FE7A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3323949-E1E1-40EA-BA77-4FE7CAB4E395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3323949-E1E1-40EA-BA77-4FE7CAB4E395}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3323949-E1E1-40EA-BA77-4FE7CAB4E395}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3323949-E1E1-40EA-BA77-4FE7CAB4E395}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F33821A0-6AB1-46E9-B5FD-66C4C11D2139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F33821A0-6AB1-46E9-B5FD-66C4C11D2139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F33821A0-6AB1-46E9-B5FD-66C4C11D2139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F33821A0-6AB1-46E9-B5FD-66C4C11D2139}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98B5CA84-18F7-4BF2-B69C-8E8DB5A35A5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98B5CA84-18F7-4BF2-B69C-8E8DB5A35A5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98B5CA84-18F7-4BF2-B69C-8E8DB5A35A5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98B5CA84-18F7-4BF2-B69C-8E8DB5A35A5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,6 +121,11 @@ Global
 		{9ECB4110-3318-45DC-9D11-ED05BC1C82AF} = {3F55B43E-7313-49DE-A7B9-B248984FC9E9}
 		{4F0F7938-B79A-4305-934B-AD43C519F6A8} = {9ECB4110-3318-45DC-9D11-ED05BC1C82AF}
 		{542BEFC1-9B55-45AA-AECA-4410910FE7A5} = {9ECB4110-3318-45DC-9D11-ED05BC1C82AF}
+		{E1A4D408-B32D-4600-AA82-3B5E08616D0B} = {83B274BD-1427-44DD-8607-B702E01CBAFF}
+		{29FEE2A5-29FB-4FFE-B2C0-71208976B202} = {83B274BD-1427-44DD-8607-B702E01CBAFF}
+		{A3323949-E1E1-40EA-BA77-4FE7CAB4E395} = {E1A4D408-B32D-4600-AA82-3B5E08616D0B}
+		{F33821A0-6AB1-46E9-B5FD-66C4C11D2139} = {29FEE2A5-29FB-4FFE-B2C0-71208976B202}
+		{98B5CA84-18F7-4BF2-B69C-8E8DB5A35A5C} = {29FEE2A5-29FB-4FFE-B2C0-71208976B202}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1DBBD8CB-EE8A-4EEE-8798-D55A5EA0704B}

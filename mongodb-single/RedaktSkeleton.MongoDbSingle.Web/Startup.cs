@@ -9,20 +9,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RedaktSkeleton.AwsMongoDbDistributed.Web
+namespace RedaktSkeleton.MongoDbSingle.Web
 {
     public class Startup
     {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        public IConfiguration Configuration { get; }
+
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRedakt()  // Adds generic Redakt services and common feature modules.
                 .AddMongoDbDataStore()  // Adds MongoDB database services.
-                .AddMongoCappedCollectionServiceBus()  // Adds MongoDB Capped Collection service bus services.
-                .AddS3Storage();  // Adds AWS S3 storage services.
-                //.AddGridFsFileStore()  // Alternative to S3: Adds MongoDB GridFS embedded storage services.
-                //.AddAwsServiceBus();  // Alternative to Capped Collection Service Bus: Adds AWS SNS/SQS service bus services.
+                .AddGridFsFileStore();  // Adds MongoDB GridFS embedded storage services.
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,9 +58,13 @@ namespace RedaktSkeleton.AwsMongoDbDistributed.Web
             });
 
             app.UseRouting();
+                                    
+            app.UseAuthorization();  // UseAuthorization required for projects with back office.
 
             // Redakt middleware
             app.UseRedaktUrlManagement();  // Remove this line (and the package) if you do not want to use Redakt URL management.
+            app.UseRedaktIdentityServer();
+            app.UseRedaktBackOffice();
             app.UseRedaktPageRendering();  // Remove this line if you do not want to use Redakt page (Razor template) rendering.
             app.UseRedaktContentApi();  // Remove this line (and the package) if you do not want to use the Redakt Content Delivery API.
             app.UseRedaktSitemapXml();  // Remove this line if you do not want Redakt to automaticaly generate a sitemap.xml.

@@ -19,7 +19,8 @@ namespace RedaktSkeleton.AzureCosmosDbDistributed.Web
         {
             services.AddRedakt()  // Adds generic Redakt services and common feature modules.
                 .AddCosmosDbDataStore()  // Adds CosmosDB database services.
-                .AddAzureBlobStorage();  // Adds Azure Blob Storage services.
+                .AddAzureBlobStorage()  // Adds Azure Blob Storage services.
+                .AddAzureServiceBus();  // Adds Azure Service Bus services.
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -29,9 +30,30 @@ namespace RedaktSkeleton.AzureCosmosDbDistributed.Web
             {
                 app.UseDeveloperExceptionPage();
             }
+                        
+            app.UseHsts();
+            app.UseHttpsRedirection();
+
+            app.UseResponseCompression();  // Response compression of dynamic pages is recommended.
+
+            // Set compression & cache for static files.
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                HttpsCompression = Microsoft.AspNetCore.Http.Features.HttpsCompressionMode.Compress,
+                OnPrepareResponse = context =>
+                {
+                    var headers = context.Context.Response.GetTypedHeaders();
+                    headers.CacheControl = new Microsoft.Net.Http.Headers.CacheControlHeaderValue
+                    {
+                        Public = true,
+                        MaxAge = TimeSpan.FromDays(30)
+                    };
+                }
+            });
 
             app.UseRouting();
-
+                                    
+            // Redakt middleware
             app.UseRedaktUrlManagement();  // Remove this line (and the package) if you do not want to use Redakt URL management.
             app.UseRedaktPageRendering();  // Remove this line if you do not want to use Redakt page (Razor template) rendering.
             app.UseRedaktContentApi();  // Remove this line (and the package) if you do not want to use the Redakt Content Delivery API.
