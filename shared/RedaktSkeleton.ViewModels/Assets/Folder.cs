@@ -8,7 +8,7 @@ namespace RedaktSkeleton.ViewModels.Assets
     [Key("__Folder")]
     [AllowAtRoot]
     [AllowChildren(typeof(Folder), typeof(Image), typeof(Document))]
-    [Icon(ContentIcons.Folders.Folder)]
+    [Icon(ContentIcons.Folder)]
     public class Folder: IContentType
     {
     }

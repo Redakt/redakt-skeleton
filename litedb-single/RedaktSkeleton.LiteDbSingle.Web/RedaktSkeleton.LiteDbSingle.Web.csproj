@@ -5,14 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Redakt.ContentManagement.Web" Version="1.1.3" />
-    <PackageReference Include="Redakt.ContentManagement.Web.Api" Version="1.1.3" />
-    <PackageReference Include="Redakt.ContentManagement.BackOffice" Version="1.1.3" />
-    <PackageReference Include="Redakt.IdentityServer" Version="1.1.3" />
-    <PackageReference Include="Redakt.IdentityStore.BackOffice" Version="1.1.3" />
-    <PackageReference Include="Redakt.UrlManagement.BackOffice" Version="1.1.3" />
-    <PackageReference Include="Redakt.UrlManagement.Web" Version="1.1.3" />
-    <PackageReference Include="Redakt.Providers.LiteDb" Version="1.1.3" />
+    <PackageReference Include="Redakt.ContentManagement.Web" Version="1.1.4" />
+    <PackageReference Include="Redakt.ContentManagement.Web.Api" Version="1.1.4" />
+    <PackageReference Include="Redakt.ContentManagement.BackOffice" Version="1.1.4" />
+    <PackageReference Include="Redakt.IdentityServer" Version="1.1.4" />
+    <PackageReference Include="Redakt.IdentityStore.BackOffice" Version="1.1.4" />
+    <PackageReference Include="Redakt.UrlManagement.BackOffice" Version="1.1.4" />
+    <PackageReference Include="Redakt.UrlManagement.Web" Version="1.1.4" />
+    <PackageReference Include="Redakt.Providers.LiteDb" Version="1.1.4" />
   </ItemGroup>
 
   <ItemGroup>

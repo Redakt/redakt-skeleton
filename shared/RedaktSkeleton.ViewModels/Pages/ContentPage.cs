@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace RedaktSkeleton.ViewModels.Pages
 {
     [Page]
-    [Icon(ContentIcons.Documents.TextFile)]
+    [Icon(ContentIcons.ContentView)]
     [AllowChildren(typeof(ContentPage))]
     [AllowView("ContentPage")]
     [ResponseCache(300)]

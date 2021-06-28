@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace RedaktSkeleton.ViewModels.Pages
 {
     [Page]
-    [Icon(ContentIcons.Web.Home)]
+    [Icon(ContentIcons.Home)]
     [AllowAtRoot]
     [AllowChildren(typeof(ContentPage))]
     [AllowView("Homepage")]
