@@ -5,11 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Redakt.ContentManagement.BackOffice" Version="1.1.4" />
-    <PackageReference Include="Redakt.IdentityServer" Version="1.1.4" />
-    <PackageReference Include="Redakt.IdentityStore.BackOffice" Version="1.1.4" />
-    <PackageReference Include="Redakt.UrlManagement.BackOffice" Version="1.1.4" />
-    <PackageReference Include="Redakt.Providers.MongoDb" Version="1.1.4" />
+    <PackageReference Include="Redakt.ContentManagement.BackOffice" Version="1.2.0" />
+    <PackageReference Include="Redakt.IdentityServer" Version="1.2.0" />
+    <PackageReference Include="Redakt.IdentityStore.BackOffice" Version="1.2.0" />
+    <PackageReference Include="Redakt.UrlManagement.BackOffice" Version="1.2.0" />
+    <PackageReference Include="Redakt.Providers.MongoDb" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>
