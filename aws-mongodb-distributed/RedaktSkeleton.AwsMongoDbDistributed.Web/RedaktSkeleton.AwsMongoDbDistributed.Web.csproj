@@ -5,11 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Redakt.ContentManagement.Web" Version="1.2.0" />
-    <PackageReference Include="Redakt.ContentManagement.Web.Api" Version="1.2.0" />
-    <PackageReference Include="Redakt.UrlManagement.Web" Version="1.2.0" />
-    <PackageReference Include="Redakt.Providers.Amazon" Version="1.2.0" />
-    <PackageReference Include="Redakt.Providers.MongoDb" Version="1.2.0" />
+    <PackageReference Include="Redakt.ContentManagement.Web" Version="1.2.1" />
+    <PackageReference Include="Redakt.ContentManagement.Web.Api" Version="1.2.1" />
+    <PackageReference Include="Redakt.UrlManagement.Web" Version="1.2.1" />
+    <PackageReference Include="Redakt.Providers.Amazon" Version="1.2.1" />
+    <PackageReference Include="Redakt.Providers.MongoDb" Version="1.2.1" />
   </ItemGroup>
 
   <ItemGroup>
