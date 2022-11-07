@@ -7,7 +7,7 @@ namespace RedaktSkeleton.ViewModels.Assets
     [Asset]
     [Key("__Document")]
     [Icon(ContentIcons.Document)]
-    [MediaUpload]
+    [FileUpload]
     public class Document: IContentType
     {
         public Media File { get; set; }
