@@ -10,7 +10,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Redakt.ContentManagement.Web" Version="1.3.0" />
+		<PackageReference Include="Redakt.ContentManagement.Web" Version="1.4.0" />
 	</ItemGroup>
 
 	<ItemGroup>
